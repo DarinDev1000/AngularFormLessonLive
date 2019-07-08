@@ -21,6 +21,9 @@
               id="name"
               formControlName="name"
               class="form-control">
+            <span
+              *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched"
+              class="form-text text-muted">Please enter a Name!</span>
           </div>
 
           <div class="form-group col-12 col-md-6">
@@ -30,6 +33,9 @@
               id="email"
               formControlName="email"
               class="form-control">
+            <span
+              *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+              class="form-text text-muted">Please enter a valid Email!</span>
           </div>
         </div>
 
@@ -41,6 +47,9 @@
               id="streetAddress"
               formControlName="streetAddress"
               class="form-control">
+            <span
+              *ngIf="!signupForm.get('streetAddress').valid && signupForm.get('streetAddress').touched"
+              class="form-text text-muted">Please enter a Street Address!</span>
           </div>
 
           <div class="form-group col-12 col-md-6">
@@ -50,6 +59,9 @@
               id="city"
               formControlName="city"
               class="form-control">
+            <span
+              *ngIf="!signupForm.get('city').valid && signupForm.get('city').touched"
+              class="form-text text-muted">Please enter a City!</span>
           </div>
         </div>
 
@@ -64,6 +76,9 @@
             <option>United States</option>
             <option>Non United States</option>
           </select>
+          <span
+            *ngIf="!signupForm.get('country').valid && signupForm.get('country').touched"
+            class="form-text text-muted">Please enter a Country!</span>
         </div>
 
         <div class="form-group">
@@ -73,6 +88,9 @@
             id="zipCode"
             formControlName="zipCode"
             class="form-control">
+          <span
+            *ngIf="!signupForm.get('zipCode').valid && signupForm.get('zipCode').touched"
+            class="form-text text-muted">Please enter a valid Zip Code!</span>
         </div>
 
         <div class="form-group">
@@ -82,7 +100,14 @@
             id="favoriteSauce"
             formControlName="favoriteSauce"
             class="form-control">
+          <span
+            *ngIf="!signupForm.get('favoriteSauce').valid && signupForm.get('favoriteSauce').touched"
+            class="form-text text-muted">Please enter a Favorite Sauce that is good... (I'll be the judge of that:)</span>
         </div>
+
+        <span
+          *ngIf="!signupForm.valid && signupForm.touched"
+          class="form-text text-muted">Please enter valid data!</span>
 
         <button
           class="btn btn-primary"
