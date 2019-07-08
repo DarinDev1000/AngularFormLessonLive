@@ -55,4 +55,8 @@ export class AppComponent implements OnInit {
     console.log(this.signupForm);
     console.log(this.signupForm.value);
   }
+
+  onReset() {
+    this.signupForm.reset();
+  }
 }
