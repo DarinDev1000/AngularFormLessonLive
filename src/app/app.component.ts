@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +11,16 @@ export class AppComponent implements OnInit {
   accountType = ['Personal', 'Business'];
   signupForm: FormGroup;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.signupForm = new FormGroup({
+      'accountType': new FormControl('Personal'),
+      'name': new FormControl(null),
+      'email': new FormControl(null),
+      'streetAddress': new FormControl(null),
+      'city': new FormControl(null),
+      'country': new FormControl(null),
+      'zipCode': new FormControl(null),
+      'favoriteSauce': new FormControl(null)
+    });
+  }
 }
