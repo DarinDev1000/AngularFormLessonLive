@@ -8,3 +8,16 @@
   border-radius: 10px;
   box-shadow: 2px 2px 0px 0px #AAAAAA;
 }
+
+// input.ng-invalid.ng-touched {
+//   border: 1px solid red;
+// }
+
+input, select {
+  &.ng-invalid {
+    &.ng-touched {
+      border: 1px solid red;
+    }
+  }
+}
+
