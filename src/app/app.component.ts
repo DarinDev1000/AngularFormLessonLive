@@ -23,4 +23,8 @@ export class AppComponent implements OnInit {
       'favoriteSauce': new FormControl(null)
     });
   }
+
+  onSubmit() {
+    console.log(this.signupForm);
+  }
 }
