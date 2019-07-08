@@ -23,6 +23,15 @@ export class AppComponent implements OnInit {
       'zipCode': new FormControl(null, [Validators.pattern("[0-9]*"), Validators.maxLength(6)]),
       'favoriteSauce': new FormControl(null)
     });
+
+    // // Subscribe to value changes
+    // this.signupForm.valueChanges.subscribe(
+    //   (value) => console.log(value)
+    // );
+    // Subscribe to status changes
+    this.signupForm.statusChanges.subscribe(
+      (status) => console.log(status)
+    );
   }
 
   onSubmit() {
