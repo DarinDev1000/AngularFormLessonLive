@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-12 col-md-8 form-box">
-      <form>
+      <form [formGroup]="signupForm">
 
         <div class="form-group">
           <label for="accountType">Account Type</label>
@@ -73,6 +73,10 @@
             id="favoriteSauce"
             class="form-control">
         </div>
+
+        <button
+          class="btn btn-primary"
+          type="submit">Submit</button>
 
       </form>
     </div>
