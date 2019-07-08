@@ -6,7 +6,10 @@
         <div class="form-group">
           <label for="accountType">Account Type</label>
           <div class="radio" *ngFor="let type of accountType">
-            <input type="radio" [value]="type"> {{ type }}
+            <input
+              type="radio"
+              formControlName="accountType"
+              [value]="type"> {{ type }}
           </div>
         </div>
 
@@ -16,6 +19,7 @@
             <input
               type="text"
               id="name"
+              formControlName="name"
               class="form-control">
           </div>
 
@@ -24,6 +28,7 @@
             <input
               type="text"
               id="email"
+              formControlName="email"
               class="form-control">
           </div>
         </div>
@@ -34,6 +39,7 @@
             <input
               type="text"
               id="streetAddress"
+              formControlName="streetAddress"
               class="form-control">
           </div>
 
@@ -42,6 +48,7 @@
             <input
               type="text"
               id="city"
+              formControlName="city"
               class="form-control">
           </div>
         </div>
@@ -51,6 +58,7 @@
           <select
             type="text"
             id="country"
+            formControlName="country"
             class="form-control"
             placeholder="Select Country">
             <option>United States</option>
@@ -63,6 +71,7 @@
           <input
             type="text"
             id="zipCode"
+            formControlName="zipCode"
             class="form-control">
         </div>
 
@@ -71,6 +80,7 @@
           <input
             type="text"
             id="favoriteSauce"
+            formControlName="favoriteSauce"
             class="form-control">
         </div>
 
