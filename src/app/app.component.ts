@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       'streetAddress': new FormControl(null),
       'city': new FormControl(null),
       'country': new FormControl(null, Validators.required),
-      'zipCode': new FormControl(null, Validators.pattern("[0-9]*")),
+      'zipCode': new FormControl(null, [Validators.pattern("[0-9]*"), Validators.maxLength(6)]),
       'favoriteSauce': new FormControl(null)
     });
   }
