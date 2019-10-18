@@ -1,5 +1,8 @@
 # AngularFormLessonLive
 
+Check out the original project [here](https://github.com/DarinDev1000/AngularFormLesson1).
+This repository was a live code of the original in a class.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
